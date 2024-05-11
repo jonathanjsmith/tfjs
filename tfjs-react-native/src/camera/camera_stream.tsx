@@ -154,7 +154,7 @@ const DEFAULT_USE_CUSTOM_SHADERS_TO_RESIZE = false;
  *      <TensorCamera
  *       // Standard Camera props
  *       style={styles.camera}
- *       type={Camera.Constants.Type.front}
+ *       type={'front'}
  *       // Tensor related props
  *       resizeHeight={200}
  *       resizeWidth={152}
@@ -326,7 +326,7 @@ export function cameraWithTensors<T extends WrappedComponentProps>(
           cameraLayout.height
         );
         const isFrontCamera =
-          this.camera.props.type === Camera.Constants.Type.front;
+          this.camera.props.type === 'front'; 
         const flipHorizontal =
           Platform.OS === 'ios' && isFrontCamera ? false : true;
 
